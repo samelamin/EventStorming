@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Sticky Notes. An HTML5/CSS3/JS Experimental App. Notes are saved to HTML5 Local Storage. Requires Google Chrome or Safari.">
+    <meta property="og:description" content="Sticky Notes. An HTML5/CSS3/JS Experimental App. Notes are saved to HTML5 Local Storage. Requires Google Chrome or Safari.">
+    <meta property="og:url" content="http://tech.just-eat.com/">
+    <meta property="og:title" content="Sticky Notes">
+    <a id="logo" href="http://tech.just-eat.com" title="JUST EAT Technology">
+        <img src="http://tech.just-eat.com/wp-content/uploads/2014/09/just-eat-technology-logo_thumb.png" alt="JUST EAT Technology">
+    </a>
+    <title>JUSTEAT Event Storming</title>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Short+Stack" media="all">
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/media.css" media="all" />
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="js/Math.uuid.js"></script>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="splash" id="splash">
+            <div class="splash-note">
+                <h1 class="splash-title">Event Storming</h1>
+                <p>Event Storming is a workshop format for quickly exploring complex business domains. </p>
+                <div class="close-splash"></div>
+            </div>
+        </div>
+
+
+        <div class="workspace" id="workspace">
+
+            <div id="trash" class="button trash closed"><span class="tooltip right">Drag a note here to throw it away</span></div>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <h1 class="site-title">Sticky Notes</h1>
+            <div class="btnpanel" id="sidepanel">
+                <div class="button newnote" id="new_note"><span class="tooltip left">new note</span></div>
+            </div>
+            <form class="note-form" method="get" id="note-form" accept-charset="utf-8">
+                <label for="titlebox">
+                    <input class="titlebox" disabled="true" id="titlebox" name="title" type="text" />
+                    <span class="tooltip left">Press tab to type in this note.</span>
+                </label>
+                <label for="textbox">
+                    <textarea class="textbox" id="textbox" name="textbox" disabled="true" placeholder="Click the + button to create a new note."></textarea>
+                    <span class="tooltip left">Press tab again to go to the next note.</span>
+                </label>
+                <div class="due">
+                    <label for="due_date">
+                        <div class="button clock"><span class="tooltip left">Set a due date</span></div>
+                        <input class="datebox" disabled="true" id="due_date" name="due_date" type="text" />
+                    </label>
+                </div>
+                <div class="colorpicker" id="colorpicker"><div class="color-box color-01"></div><div class="color-box color-02"></div><div class="color-box color-03"></div><div class="color-box color-04"></div><div class="color-box color-05"></div><div class="color-box color-06"></div><div class="color-box color-07"></div><div class="color-box color-08"></div></div>
+            </form>
+        </div>
+    </div>
+    <audio id="trash_sound" src="assets/trash.ogg"></audio>
+    <script type="text/javascript" src="js/sticky-core.js"></script>
+</body>
+</html>
